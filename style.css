@@ -1,0 +1,304 @@
+h1 {
+    font-family: Bebas Neue;
+    font-size: 120px !important;
+    font-weight: 300 !important;
+    color: white;
+}
+
+h2 {
+    font-family: Bebas Neue;
+    font-size: 30px !important;
+    font-weight: 300 !important;
+    color: black;
+}
+
+h3 {
+    font-family: Lato;
+    font-size: 60px !important;
+    font-weight: 300 !important;
+    color: white;
+}
+
+
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+#nextSlide {
+    width:100px;
+    margin-top:50px;
+    border-width:2px;
+    border-radius:0px;
+    font-family:Outfit;
+    font-weight:400;
+    box-shadow:none;
+}
+
+/*scroll snap container CSS */
+.scroll-snap {
+    scroll-snap-type: y mandatory !important;
+    overflow-y: scroll;
+    max-height: 100vh;
+
+}
+
+/* scroll snap children CSS */
+.container {
+    scroll-snap-align: start !important;
+    height: 100vh; /* this sets each container to be 100% of the viewport height */
+    position: relative;
+}
+
+/* Links in sig slide */
+.links {
+    display:inline-block;
+    padding: 0px 75px;
+    color: rgb(49, 49, 49);
+    text-decoration:none;
+    font-family: Lato;
+    font-weight:400;
+    font-size: 20px;
+}
+
+/* Links hover sig slide */
+.links:hover {
+    color: rgb(184, 184, 184);
+}
+
+h4 {
+    font-family: Lato !important;
+    font-size: 75px !important;
+    font-weight: 400 !important;
+}
+
+h5 {
+    font-family: Lato !important;
+    font-size: 40px !important;
+    font-weight:300 !important;
+}
+
+h6 {
+    font-family: Lato !important;
+    font-size: 30px !important;
+    font-weight:300 !important;
+}
+
+label {
+    font-family: Lato !important;
+}
+
+input {
+    font-family: Lato !important;
+}
+
+#submitForm {
+    font-family: Lato !important;
+}
+
+p {
+    font-family: Lato !important;
+}
+
+.card {
+    display:inline-block !important;
+    margin: 0px 50px;
+}
+
+textarea {
+    height: 150px;
+}
+
+/*slick.js carousel arrows*/
+.slick-prev:before, .slick-next:before { 
+    color:rgb(180, 180, 180) !important;
+}
+
+
+#animation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /*width: 17rem;
+    height: 17rem;*/
+  }
+
+#animation div {
+    width: 4VW;
+    height: 4VW;
+    background: linear-gradient(30deg, rgb(233, 233, 233) 20%,rgb(255, 255, 255) 90%);
+    border-radius: 50%;
+    border: 2px solid white; 
+
+    z-index: 0 !important
+  }
+
+.title {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
+/*
+.myName {
+    z-index: 1 !important;
+    text-shadow: -1px 0 rgb(172, 172, 172), 0 1px rgb(172, 172, 172), 1px 0 rgb(172, 172, 172), 0 -1px rgb(172, 172, 172);
+
+    color: white !important
+}
+*/
+
+.myName {
+    z-index: 1 !important;
+
+    /*
+    font-family: Roboto !important;
+    font-size: 100px !important;
+    font-weight: 700 !important;
+    */
+
+    color: #000000 !important
+}
+
+.project {
+    box-shadow: inset 0 0 0 0 #FF8300;
+	-webkit-transition: all ease 0.8s;
+
+}
+
+.project:hover {
+    box-shadow: inset 35rem 0 0 0.05px #FF8300;
+}
+
+
+.lang {
+    animation: rotation 10s infinite linear;
+  }
+
+.lang:hover{
+    animation: bigger .5s forwards;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+@keyframes bigger {
+    from {
+      height: 100px;
+    }
+    to {
+      height: 130px;
+    }
+}
+
+input {
+    border-width: 0 0 1px 0 !important;
+    border-color:white !important;
+    font-size: 60px !important;
+    background: none !important;
+    border-radius: 0% !important;
+    color: white !important;
+}
+
+textarea {
+    border-width: 0 0 1px 0 !important;
+    border-color:white !important;
+    font-size: 20px !important;
+    color: white !important;
+    background: none !important;
+    border-radius: 0% !important;
+    resize: none !important;
+
+}
+
+/*placeholder text in input/textarea*/
+::placeholder {
+    color: white !important;
+    font-size: 60px !important;
+}
+
+/* make placeholder text transparent on focus */
+input:focus::placeholder {
+    color: transparent !important;
+}
+textarea:focus::placeholder {
+    color: transparent !important;
+}
+
+#contactForm{
+    position: relative;
+    top: -9rem;
+}
+
+.carousel-item{
+    height: 10rem !important;
+}
+
+#submitButton {
+    position: relative;
+    top: -17rem;
+    z-index: 1;
+    background-color: transparent !important;
+    border-radius: 0px;
+    border: 1px solid white !important;
+    font-size: 15px;
+    font-family: Lato;
+    font-weight: 100;
+    padding: 15px;
+    height: 3.5rem;
+    width: 8rem;
+    display: None;
+
+    box-shadow: inset 0 0 0 0 #FFFFFF;
+    -webkit-transition: all ease 1.5s;
+
+
+}
+
+
+
+#submitButton:hover {
+    box-shadow: inset 35rem 0 0 0px #FFFFFF;
+    color: #FF8300;
+    font-size: 13px;
+}
+
+
+
+#prevButton {
+    display: none;
+}
+
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(207, 207, 207, 0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-resizer {
+    background: transparent;
+}
+
+ 
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(202, 202, 202, 0.801); 
+    -webkit-box-shadow: inset 0 0 6px rgba(197, 197, 197, 0.5); 
+}
+
+
