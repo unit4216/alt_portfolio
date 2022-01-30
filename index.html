@@ -46,9 +46,7 @@
         <link rel='stylesheet' type='text/css' href='fullPage.js/dist/fullpage.css'>
         <script type='text/javascript' src='fullPage.js/dist/fullpage.js'></script>
 
-        <!--Three.js-->
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js'></script>
+
 
         <!--Anime.js-->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js'></script>
@@ -136,10 +134,10 @@
                             <div id="contactForm" class="carousel slide" data-bs-ride="carousel" data-bs-interval='false'>
                                 <div class="carousel-inner">
                                   <div class="carousel-item active" id='slide1'>
-                                    <input type='text' class='form-control' placeholder='Your name'></input>
+                                    <input type='text' class='form-control' id='name' placeholder='Your name'></input>
                                   </div>
                                   <div class="carousel-item" id='slide2'>
-                                    <input type='text' class='form-control' placeholder='Your email'></input>
+                                    <input type='text' class='form-control' id='email' placeholder='Your email'></input>
                                   </div>
                                   <div class="carousel-item" id='slide3'>
                                     <textarea type='text' class='form-control' placeholder='Your message' id='message'></textarea>
@@ -157,7 +155,7 @@
                     <div class='row'>
                         <div class='col-md-5'></div>
                         <div class='col-md-2'>
-                            <button class='btn btn-primary' type='button' id='submitButton'>SUBMIT</button>
+                            <button class='btn btn-primary' type='button' id='submitButton' onclick=sendMail()>SUBMIT</button>
                         </div>
                         <div class='col-md-5'></div>
                     </div>
@@ -289,7 +287,31 @@
                     nextButton.style.display = "none";
                 }
             })
-                
+
+            
+            //PHPmailer call
+            function sendMail () {
+
+                var contactName = document.getElementById('name').value;
+                var contactEmail = document.getElementById('email').value;
+                var contactMessage = document.getElementById('message').value;
+
+
+                alert('mail sent');
+                $.ajax({
+                    url:"sendMail.php", //the page containing php script
+                    type: "POST", //request type
+                    data: {
+                        name: contactName,
+                        email: contactEmail,
+                        message: contactMessage,
+                    },
+                    success:function(result){
+                    alert(result);
+                }
+                });
+            }
+
 
             
 
