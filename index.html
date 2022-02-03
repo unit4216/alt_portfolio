@@ -134,15 +134,15 @@
                             <div id="contactForm" class="carousel slide" data-bs-ride="carousel" data-bs-interval='false'>
                                 <div class="carousel-inner">
                                   <div class="carousel-item active" id='slide1'>
-                                    <input type='text' class='form-control' id='name' placeholder='Your name' required></input>
+                                    <input type='text' class='form-control' id='name' placeholder='Your name' maxlength='50'></input>
                                     <div id='nameInvalidText' class='invalidMessage' style='visibility:hidden'>Cannot leave this field empty.</div>
                                   </div>
                                   <div class="carousel-item" id='slide2'>
-                                    <input type='text' class='form-control' id='email' placeholder='Your email'></input>
+                                    <input type='text' class='form-control' id='email' placeholder='Your email' maxlength='50'></input>
                                     <div id='emailInvalidText' class='invalidMessage' style='visibility:hidden'>Please enter a valid email.</div>
                                   </div>
                                   <div class="carousel-item" style='margin-bottom:1rem;' id='slide3'>
-                                    <textarea type='text' class='form-control' placeholder='Your message' id='message'></textarea>
+                                    <textarea type='text' class='form-control' placeholder='Your message' id='message' maxlength='2500'></textarea>
                                     <div id='messageInvalidText' class='invalidMessage' style='visibility:hidden'>Cannot leave message empty.</div>
                                   </div>
                                 </div>   
@@ -312,7 +312,7 @@
                 });
             }
 
-            //form validation
+            //contactForm inputs validation
             const nameListen = document.querySelector('#name');
             const emailListen = document.querySelector('#email');
             const messageListen = document.querySelector('#message');
