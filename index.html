@@ -61,15 +61,15 @@
     <body>
 
         <div id="fullpage">
-            <div class="section" style='background-color:white'>
+            <div class="section" style='background-color:white' data-anchor='landingPageAnchor'>
                 <div id='animation'><!--animation goes here--></div>
                 <div class='title'>
                     <h1 class='myName' data-aos='fade-up' data-aos-duration='1000'>PABLO PALIZA</h1>
-                    <h2 class='myName' style='display:inline-block;margin-left:100px' data-aos='fade-up' data-aos-duration='2000' >ABOUT ME</h2><h2 class='myName' style='display:inline-block;margin-left:30px' data-aos='fade-up' data-aos-duration='2400'>WORK</h2><h2 class='myName' style='display:inline-block;margin-left:30px' data-aos='fade-up' data-aos-duration='2800'>CONTACT</h2>
+                    <h2 class='myName' style='display:inline-block;margin-left:100px' data-aos='fade-up' data-aos-duration='2000' ><a href='#aboutMeAnchor'>ABOUT ME</a></h2><h2 class='myName' style='display:inline-block;margin-left:30px' data-aos='fade-up' data-aos-duration='2400'><a href='#projectsAnchor'>WORK</a></h2><h2 class='myName' style='display:inline-block;margin-left:30px' data-aos='fade-up' data-aos-duration='2800'><a href='#contactMeAnchor'>CONTACT</a></h2>
                 </div>
                 
             </div>
-            <div class="section" id='aboutMe' style='background-color:rgb(44, 44, 44)'>
+            <div class="section" id='aboutMe' data-anchor='aboutMeAnchor' style='background-color:rgb(44, 44, 44)'>
                 <div class='container'>
                     <div class='row'>
                         <div class='col-md-8'>
@@ -87,7 +87,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section" id='projects' style='background-color:white'>
+            <div class="section" id='projects' data-anchor='projectsAnchor' style='background-color:white'>
                 <div class='container'>
                     <div class='row'>
                         <div class='col-md-12'>
@@ -115,7 +115,7 @@
                          
                 </div>
             </div>
-            <div class="section" id='contactMe' style='background-color:#FF8300'>
+            <div class="section" id='contactMe' data-anchor='contactMeAnchor' style='background-color:#FF8300'>
                 <div class='container'>
                     <div class='row'>
                         <div class='col-md-12'>
@@ -176,6 +176,7 @@
                 autoScrolling:true,
                 scrollHorizontally: true,
                 normalScrollElements: '#message',
+                anchors: ['landingPageAnchor','aboutMeAnchor','projectsAnchor','contactMeAnchor'],
             });
 
             //methods
