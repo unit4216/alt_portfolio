@@ -134,19 +134,22 @@
                             <div id="contactForm" class="carousel slide" data-bs-ride="carousel" data-bs-interval='false'>
                                 <div class="carousel-inner">
                                   <div class="carousel-item active" id='slide1'>
-                                    <input type='text' class='form-control' id='name' placeholder='Your name'></input>
+                                    <input type='text' class='form-control' id='name' placeholder='Your name' required></input>
+                                    <div id='nameInvalidText' class='invalidMessage' style='visibility:hidden'>Cannot leave this field empty.</div>
                                   </div>
                                   <div class="carousel-item" id='slide2'>
                                     <input type='text' class='form-control' id='email' placeholder='Your email'></input>
+                                    <div id='emailInvalidText' class='invalidMessage' style='visibility:hidden'>Please enter a valid email.</div>
                                   </div>
-                                  <div class="carousel-item" id='slide3'>
+                                  <div class="carousel-item" style='margin-bottom:1rem;' id='slide3'>
                                     <textarea type='text' class='form-control' placeholder='Your message' id='message'></textarea>
+                                    <div id='messageInvalidText' class='invalidMessage' style='visibility:hidden'>Cannot leave message empty.</div>
                                   </div>
                                 </div>   
                             </div>
                         </div>
                         <div class='col-md-2'>
-                            <button class="carousel-control-next" type="button" data-bs-target="#contactForm" data-bs-slide="next" id='nextButton'>
+                            <button class="carousel-control-next" type="button" data-bs-target="#contactForm" data-bs-slide-to="0" id='nextButton'>
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
@@ -155,7 +158,7 @@
                     <div class='row'>
                         <div class='col-md-5'></div>
                         <div class='col-md-2'>
-                            <button class='btn btn-primary' type='button' id='submitButton' onclick=sendMail()>SUBMIT</button>
+                            <button class='btn btn-primary' type='button' id='submitButton' onclick=sendMail() disabled=true>SUBMIT</button>
                         </div>
                         <div class='col-md-5'></div>
                     </div>
@@ -234,7 +237,6 @@
 
             tl.play()
             
-            document.querySelector('body').onclick = tl.play;
 
 
             
@@ -296,8 +298,6 @@
                 var contactEmail = document.getElementById('email').value;
                 var contactMessage = document.getElementById('message').value;
 
-
-                alert('mail sent');
                 $.ajax({
                     url:"sendMail.php", //the page containing php script
                     type: "POST", //request type
@@ -312,6 +312,60 @@
                 });
             }
 
+            //form validation
+            const nameListen = document.querySelector('#name');
+            const emailListen = document.querySelector('#email');
+            const messageListen = document.querySelector('#message');
+
+            nameListen.addEventListener('blur', checkNameValid);
+            emailListen.addEventListener('blur', checkEmailValid);
+            messageListen.addEventListener('input', checkMessageValid);
+
+
+            function checkNameValid(e) {
+                if(nameListen.value == ''){
+                    nextButton.setAttribute('data-bs-slide-to','0');
+                    nextButton.removeAttribute('data-bs-slide');
+                    document.getElementById('nameInvalidText').style.visibility='visible';
+                }
+                else{
+                    nextButton.setAttribute('data-bs-slide','next');
+                    nextButton.removeAttribute('data-bs-slide-to');
+                    document.getElementById('nameInvalidText').style.visibility='hidden';
+
+                }
+            }
+
+            var emailRegex = /\S+@\S+\.\S+/;
+
+            function checkEmailValid(e) {
+                if(emailListen.value == '' | emailRegex.test(emailListen.value)==false){
+                    nextButton.setAttribute('data-bs-slide-to','1');
+                    nextButton.removeAttribute('data-bs-slide');
+                    document.getElementById('emailInvalidText').style.visibility='visible';
+                }
+                else{
+                    nextButton.setAttribute('data-bs-slide','next');
+                    nextButton.removeAttribute('data-bs-slide-to');
+                    document.getElementById('emailInvalidText').style.visibility='hidden';
+
+                }
+            }
+
+            function checkMessageValid(e) {
+                if(messageListen.value == ''){
+                    submitButton.setAttribute('disabled',true);
+                    document.getElementById('messageInvalidText').style.visibility='visible';
+                }
+                else{
+                    submitButton.removeAttribute('disabled');
+                    document.getElementById('messageInvalidText').style.visibility='hidden';
+
+                }
+            }
+
+
+            
 
             
 

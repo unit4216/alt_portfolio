@@ -301,4 +301,7 @@ textarea:focus::placeholder {
     -webkit-box-shadow: inset 0 0 6px rgba(197, 197, 197, 0.5); 
 }
 
+.invalidMessage {
+    color: white;
+}
 
