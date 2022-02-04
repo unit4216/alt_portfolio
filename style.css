@@ -24,7 +24,10 @@ h3 {
     color: white;
 }
 
-
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
 
 html {
     scroll-behavior: smooth !important;
@@ -310,3 +313,10 @@ textarea:focus::placeholder {
     color: white;
 }
 
+/* FOR NAV CIRCLES 
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: white !important;
+    border: 2px solid #FF8300 !important;
+}
+*/
