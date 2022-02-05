@@ -183,7 +183,7 @@ textarea {
 
 .lang {
     animation: rotation 10s infinite linear;
-  }
+}
 
 .lang:hover{
     animation: bigger .5s forwards;
@@ -320,3 +320,12 @@ textarea:focus::placeholder {
     border: 2px solid #FF8300 !important;
 }
 */
+
+
+    
+.grow { 
+    transition: all .2s ease-in-out; 
+}
+.grow:hover { 
+    transform: scale(1.5); 
+}
