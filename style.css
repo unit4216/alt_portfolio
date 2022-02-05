@@ -180,6 +180,18 @@ textarea {
     box-shadow: inset 35rem 0 0 0.05px #FF8300;
 }
 
+.projectGridElement { 
+    margin-left: 5px;
+}
+
+.turnWhite {
+    -webkit-transition: all ease .5s;
+}
+
+.turnWhite:hover {
+    color: white;
+}
+
 
 .lang {
     animation: rotation 10s infinite linear;
@@ -328,4 +340,13 @@ textarea:focus::placeholder {
 }
 .grow:hover { 
     transform: scale(1.5); 
+}
+
+.builtWith {
+    font-size: 15px;
+    font-family: Lato;
+    color: white;
+    text-align: right;
+    font-weight: 300;
+    margin-right: 5px;
 }
