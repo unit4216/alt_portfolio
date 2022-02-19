@@ -37,11 +37,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-        <!--Slick (carousel)-->
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
         <!--Fullpage-->
         <link rel='stylesheet' type='text/css' href='fullPage.js/dist/fullpage.css'>
         <script type='text/javascript' src='fullPage.js/dist/fullpage.js'></script>
@@ -58,68 +53,60 @@
         <!--Anime.js-->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js'></script>
 
-        <!--Roboto-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-
     </head>
 
     <body>
 
         <div id="fullpage">
-            <div class="section" style='background-color:white' data-anchor='landingPageAnchor'>
+            <div class="section" id='landingPage' data-anchor='landingPageAnchor'>
                 <div id='animation'><!--animation goes here--></div>
                 <div class='title'>
                     <h1 class='myName' data-aos='fade-up' data-aos-duration='1800'>PABLO PALIZA</h1>
-                    <h2 class='myName' style='display:inline-block;margin-left:100px' data-aos='fade-up' data-aos-duration='2000'>
+                    <h2 class='myName' id='aboutMeLink' data-aos='fade-up' data-aos-duration='2000'>
                         <div class='grow'>
                             <a href='#aboutMeAnchor'>ABOUT ME</a>
                         </div>
                     </h2>
-                    <h2 class='myName' style='display:inline-block;margin-left:30px' data-aos='fade-up' data-aos-duration='2400'>
+                    <h2 class='myName' id='projectsLink' data-aos='fade-up' data-aos-duration='2400'>
                         <div class='grow'>
                             <a href='#projectsAnchor'>WORK</a>
                         </div>
                     </h2>
-                    <h2 class='myName' style='display:inline-block;margin-left:30px' data-aos='fade-up' data-aos-duration='2800'>
+                    <h2 class='myName' id='contactMeLink' data-aos='fade-up' data-aos-duration='2800'>
                         <div class='grow'>
                             <a href='#contactMeAnchor'>CONTACT</a>
                         </div>
                     </h2>
                 </div>
             </div>
-            <div class="section" id='aboutMe' data-anchor='aboutMeAnchor' style='background-color:rgb(44, 44, 44)'>
+            <div class="section" id='aboutMe' data-anchor='aboutMeAnchor'>
                 <div class='container'>
                     <div class='row'>
                         <div class='col-md-8'>
-                            <br>
-                            <h1 style='text-align:left;color:white' data-aos='fade-right' data-aos-duration='1800'>ABOUT ME</h1>
+                            <h1 id='aboutMeHeader' data-aos='fade-right' data-aos-duration='1800'>ABOUT ME</h1>
                             <h3 data-aos='fade-right' data-aos-duration='2200'>I'm an LA-based software and web developer.  My tech stack includes Python, JS, Node.js, and React.</h3>
                         </div>
                         <div class='col-md-4'>
-                            <br><br><br>
-                            <img src='python_svg.png' height=100px class='lang' style='margin-left: 10rem' data-aos='fade-in' data-aos-duration='1000'><br><br>
-                            <img src='react_svg.png' height=100px class='lang' data-aos='fade-in' data-aos-duration='1800'><br>
-                            <img src='js_svg.png' height=100px class='lang' style='margin-left: 15rem' data-aos='fade-in' data-aos-duration='2600'><br><br>
-                            <img src='node_svg.svg' height=100px class='lang' style='margin-left: 5rem' data-aos='fade-in' data-aos-duration='3200'>
+                            <img src='python_svg.png' id='pythonImg' height=100px class='lang' data-aos='fade-in' data-aos-duration='1000'><br><br>
+                            <img src='react_svg.png' id='reactImg' height=100px class='lang' data-aos='fade-in' data-aos-duration='1800'><br>
+                            <img src='js_svg.png' id='jsImg' height=100px class='lang' data-aos='fade-in' data-aos-duration='2600'><br><br>
+                            <img src='node_svg.svg' id='nodeImg' height=100px class='lang' data-aos='fade-in' data-aos-duration='3200'>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="section" id='projects' data-anchor='projectsAnchor' style='background-color:white'>
+            <div class="section" id='projects' data-anchor='projectsAnchor'>
                 <div class='container'>
                     <div class='row'>
                         <div class='col-md-12'>
-                            <br>
-                            <h1 style='color:black !important' data-aos='fade-down' data-aos-duration='1800'>MY PROJECTS</h1>
+                            <h1 id='projectsHeader' data-aos='fade-down' data-aos-duration='1800'>MY PROJECTS</h1>
                         </div>  
                     </div>
                     <div class='row'>
                         <div class='col-md-6'>
                             <div>
                                 <div class='project'>
-                                    <h3 style='color:black' class='projectGridElement' data-aos='fade-right' data-aos-duration='1600'>
+                                    <h3 class='projectGridElement' data-aos='fade-right' data-aos-duration='1600'>
                                         <div class='turnWhite'>
                                             Railguessr
                                             <div class='builtWith'>
@@ -129,7 +116,7 @@
                                     </h3>
                                 </div>
                                 <div class='project'>
-                                    <h3 style='color:black' class='projectGridElement' data-aos='fade-right' data-aos-duration='2000'>
+                                    <h3 class='projectGridElement' data-aos='fade-right' data-aos-duration='2000'>
                                         <div class='turnWhite'>
                                             Over/Under
                                             <div class='builtWith'>
@@ -139,7 +126,7 @@
                                     </h3>
                                 </div>
                                 <div class='project'>
-                                    <h3 style='color:black' class='projectGridElement' data-aos='fade-right' data-aos-duration='2400'>
+                                    <h3 class='projectGridElement' data-aos='fade-right' data-aos-duration='2400'>
                                         <div class='turnWhite'>
                                             Oil Futures API
                                             <div class='builtWith'>
@@ -153,7 +140,7 @@
                         <div class='col-md-6'>
                             <div>
                                 <div class='project'>
-                                    <h3 style='color:black' class='projectGridElement' data-aos='fade-left' data-aos-duration='1800'>
+                                    <h3 class='projectGridElement' data-aos='fade-left' data-aos-duration='1800'>
                                         <div class='turnWhite'>
                                             Shop
                                             <div class='builtWith'>
@@ -163,7 +150,7 @@
                                     </h3>
                                 </div>
                                 <div class='project'>
-                                    <h3 style='color:black' class='projectGridElement' data-aos='fade-left' data-aos-duration='2200'>
+                                    <h3 class='projectGridElement' data-aos='fade-left' data-aos-duration='2200'>
                                         <div class='turnWhite'>
                                             Hang.Me
                                             <div class='builtWith'>
@@ -173,7 +160,7 @@
                                     </h3>
                                 </div>
                                 <div class='project'>
-                                    <h3 style='color:black' class='projectGridElement' data-aos='fade-left' data-aos-duration='2600'>
+                                    <h3 class='projectGridElement' data-aos='fade-left' data-aos-duration='2600'>
                                         <div class='turnWhite'>
                                             GitHub
                                             <div class='builtWith'>
@@ -188,12 +175,13 @@
                          
                 </div>
             </div>
-            <div class="section" id='contactMe' data-anchor='contactMeAnchor' style='background-color:#FF8300'>
+
+            <div class="section" id='contactMe' data-anchor='contactMeAnchor'>
                 <div class='container'>
                     <div class='row'>
                         <div class='col-md-12'>
                             <br>
-                            <h1 style='text-align:left;color:white' data-aos='fade-left' data-aos-duration='1800'>CONTACT ME</h1>
+                            <h1 id='contactMeHeader' data-aos='fade-left' data-aos-duration='1800'>CONTACT ME</h1>
                         </div>
                     <div>
                     <div class='row'>
@@ -208,15 +196,15 @@
                                 <div class="carousel-inner">
                                   <div class="carousel-item active" id='slide1'>
                                     <input type='text' class='form-control' id='name' placeholder='Your name' maxlength='50'></input>
-                                    <div id='nameInvalidText' class='invalidMessage' style='visibility:hidden'>Cannot leave this field empty.</div>
+                                    <div id='nameInvalidText' class='invalidMessage'>Cannot leave this field empty.</div>
                                   </div>
                                   <div class="carousel-item" id='slide2'>
                                     <input type='text' class='form-control' id='email' placeholder='Your email' maxlength='50'></input>
-                                    <div id='emailInvalidText' class='invalidMessage' style='visibility:hidden'>Please enter a valid email.</div>
+                                    <div id='emailInvalidText' class='invalidMessage'>Please enter a valid email.</div>
                                   </div>
                                   <div class="carousel-item" style='margin-bottom:1rem;' id='slide3'>
                                     <textarea type='text' class='form-control' placeholder='Your message' id='message' maxlength='2500'></textarea>
-                                    <div id='messageInvalidText' class='invalidMessage' style='visibility:hidden'>Cannot leave message empty.</div>
+                                    <div id='messageInvalidText' class='invalidMessage'>Cannot leave message empty.</div>
                                   </div>
                                 </div>   
                             </div>
@@ -244,7 +232,7 @@
             AOS.init();
 
             new fullpage('#fullpage', {
-                //options here
+
                 scrollbar: true,
                 autoScrolling:true,
                 scrollHorizontally: true,
@@ -266,16 +254,12 @@
                 },
                 afterLoad: function(){
                     jQuery('.section.active [data-aos]').addClass("aos-animate");
-                //jQuery('.fp-table.active .aos-init').addClass('aos-animate');
                 }
             });
 
-            //methods
             fullpage_api.setAllowScrolling(true);
 
-            //////////////////////////
-            //animejs
-
+            //anime.js for landingPage
             const staggerVisualizerEl = document.querySelector('#animation');
             const fragment = document.createDocumentFragment();
             const grid = [25, 12];
@@ -284,76 +268,44 @@
             const numberOfElements = col * row;
 
             for (let i = 0; i < numberOfElements; i++) {
-            g=document.createElement('div');
-            g.setAttribute('id',i);
-            g.setAttribute('class','tile');
-            fragment.appendChild(g);
+                gridTile=document.createElement('div');
+                gridTile.setAttribute('id',i);
+                gridTile.setAttribute('class','tile');
+                fragment.appendChild(gridTile);
             }
 
             staggerVisualizerEl.appendChild(fragment);
-
-          
-
-
             
+            //defines animation timeline
             var tl = anime.timeline({
                 targets: '#animation div',
-                //scale: 3,
                 loop: true,
-            })/*
-            .add({
-                scale: .7,
-                rotate: 360,
-                duration: 10000,
-                delay: anime.stagger(200, {grid: grid, from: 150, easing:'easeInSine'})
-
-            })*/
+            })
             .add({
                 scale: [
                 {value: 5, easing: 'easeOutSine', duration: 1000},
                 {value: 1, easing: 'easeInOutQuad', duration: 1000}
                 ],
                 delay: anime.stagger(300, {grid: grid, from: 'center', easing:'easeInSine'}),
+            })
 
-            })/*
-            .add({
-                translateY: -1000,
-                duration: 3000,
-                
-                delay: anime.stagger(100, {grid: grid, from: 'first', easing:'easeInSine'})
-            })*/
-            
-
-            
-           
-
+            //plays animations
             tl.play()
             
-
-
-            
+            //on hover make tiles grow, no hover-off animation
             $('.tile').hover(function() {
                 anime ({
                 targets: this,
                 background: '#FF8300',
                 scale: 3,
-                //duration: 3000,
-
-                });/*
-                }, function() {
-                anime ({
-                targets: this,
-                background: 'linear-gradient(30deg, rgb(233, 233, 233) 20%,rgb(255, 255, 255) 90%)',
-                scale: 1
-            });*/
+                });
             });
 
-            
+            //on hover make lang/framework icons grow, hover off shrinks back to normal
             $('.lang').hover(function() {
                 anime ({
                 targets: this,
                 scale: 1.5,
-
                 })
                 }, function() {
                 anime ({
@@ -361,12 +313,8 @@
                 scale: 1,
             });
             });
-
-
-        
             
-            //function to make prev/next/submit buttons appear and disappear appopriately when moving through fields
-
+            //function to make prev/next/submit buttons appear and disappear appopriately when moving through contactForm
             var contactForm = document.getElementById('contactForm')
 
             contactForm.addEventListener('slide.bs.carousel', function (e) {
@@ -384,30 +332,8 @@
                     nextButton.style.display = "none";
                 }
             })
-
             
-            //PHPmailer call
-            function sendMail () {
-
-                var contactName = document.getElementById('name').value;
-                var contactEmail = document.getElementById('email').value;
-                var contactMessage = document.getElementById('message').value;
-
-                $.ajax({
-                    url:"sendMail.php", //the page containing php script
-                    type: "POST", //request type
-                    data: {
-                        name: contactName,
-                        email: contactEmail,
-                        message: contactMessage,
-                    },
-                    success:function(result){
-                    alert(result);
-                }
-                });
-            }
-
-            //contactForm inputs validation
+            //contactForm input validation
             const nameListen = document.querySelector('#name');
             const emailListen = document.querySelector('#email');
             const messageListen = document.querySelector('#message');
@@ -415,7 +341,6 @@
             nameListen.addEventListener('blur', checkNameValid);
             emailListen.addEventListener('blur', checkEmailValid);
             messageListen.addEventListener('input', checkMessageValid);
-
 
             function checkNameValid(e) {
                 if(nameListen.value == ''){
@@ -431,6 +356,7 @@
                 }
             }
 
+            //define regex to check for [anything]@[anything].[anything]
             var emailRegex = /\S+@\S+\.\S+/;
 
             function checkEmailValid(e) {
@@ -459,16 +385,28 @@
                 }
             }
 
+            //PHPmailer call
+            function sendMail () {
 
-            
+                var contactName = document.getElementById('name').value;
+                var contactEmail = document.getElementById('email').value;
+                var contactMessage = document.getElementById('message').value;
 
-            
+                $.ajax({
+                    url:"sendMail.php",
+                    type: "POST", 
+                    data: {
+                        name: contactName,
+                        email: contactEmail,
+                        message: contactMessage,
+                    },
+                    success:function(result){
+                    alert(result);
+                    }
+                });
+            }
 
-            
-
-            
         </script>
-
 
     </body>
 
