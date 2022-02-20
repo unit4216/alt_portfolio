@@ -101,7 +101,7 @@ AOS.init();
             
             $(function() {
             
-            const submitButton = document.getElementById('#submitButton');
+            const submitButton = document.getElementById('submitButton');
 
             submitButton.addEventListener('click', sendMail);
 
