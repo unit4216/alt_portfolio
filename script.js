@@ -176,7 +176,10 @@ $(function() {
                 message: contactMessage,
             },
             success:function(result){
-            alert(result);
+                document.getElementById('contactForm').innerHTML = 'Message sent!'
+            }, 
+            error: function (request, status, error) {
+                document.getElementById('contactForm').innerHTML = 'Error sending message.'
             }
         });
     }
