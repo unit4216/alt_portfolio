@@ -130,7 +130,7 @@ AOS.init();
             emailListen.addEventListener('blur', checkEmailValid);
             messageListen.addEventListener('input', checkMessageValid);
 
-            });
+            
             
 
             function checkNameValid(e) {
@@ -196,3 +196,5 @@ AOS.init();
                     }
                 });
             }
+
+        });
