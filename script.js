@@ -1,5 +1,7 @@
-AOS.init();
+$(function() {
 
+AOS.init();
+})
             new fullpage('#fullpage', {
 
                 scrollbar: true,
