@@ -192,10 +192,10 @@ $(function() {
         document.getElementById('submitButton').style.visibility = 'hidden';
 
         if(result=='success'){
-            document.getElementById('postForm').innerHTML = '<h1>Message sent!</h1>'
+            document.getElementById('postForm').innerHTML = '<h3 class="postFormMsg">Message sent!</h3>'
         }
         else if(result=='error'){
-            document.getElementById('postForm').innerHTML = '<h1>Error sending message.</h1>'
+            document.getElementById('postForm').innerHTML = '<h3 class="postFormMsg">Error sending message.</h3>'
         }
     }
 

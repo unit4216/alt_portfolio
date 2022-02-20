@@ -297,3 +297,7 @@ textarea:focus::placeholder {
     text-align: left;
     color:white
 }
+
+.postFormMsg {
+    text-align: center;
+}
