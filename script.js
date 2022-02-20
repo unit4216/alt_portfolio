@@ -1,6 +1,6 @@
 $(function() {
 
-    AOS.init();
+    AOS.init({disable: 'mobile'});
 
     new fullpage('#fullpage', {
 
