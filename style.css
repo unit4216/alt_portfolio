@@ -8,21 +8,21 @@ body {
   
 h1 {
     font-family: Bebas Neue;
-    font-size: 20VH !important;
+    font-size: 9VW !important;
     font-weight: 300 !important;
     color: white;
 }
 
 h2 {
     font-family: Bebas Neue;
-    font-size: 5VH !important;
+    font-size: 2VW !important;
     font-weight: 300 !important;
     color: black;
 }
 
 h3 {
     font-family: Lato;
-    font-size: 60px !important;
+    font-size: 4VW !important;
     font-weight: 300 !important;
     color: white;
 }
@@ -59,7 +59,7 @@ a {
 }
 
 .title {
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
 }
@@ -68,6 +68,10 @@ a {
     z-index: 1 !important;
     color: #000000 !important;
     display: inline-block;
+}
+
+#pageLinks {
+    text-align: center;
 }
 
 .project {
@@ -121,28 +125,33 @@ a {
 input {
     border-width: 0 0 1px 0 !important;
     border-color:white !important;
-    font-size: 60px !important;
+    font-size: 5VW !important;
     background: none !important;
     border-radius: 0% !important;
     color: white !important;
     font-family: Lato !important;
+    max-width: 70VW;
+    margin: auto !important;
+    z-index: -1 !important;
 }
 
 textarea {
     border-width: 0 0 1px 0 !important;
     border-color:white !important;
-    font-size: 20px !important;
+    font-size: 3VW !important;
     color: white !important;
     background: none !important;
     border-radius: 0% !important;
     resize: none !important;
+    max-width: 70VW;
     height: 150px;
+    margin: auto !important;
 }
 
 /*placeholder text in input/textarea*/
 ::placeholder {
     color: white !important;
-    font-size: 60px !important;
+    font-size: 5VW !important;
 }
 
 /* make placeholder text transparent on focus */
@@ -156,16 +165,12 @@ textarea:focus::placeholder {
 
 #contactForm{
     position: relative;
-    top: -9rem;
-}
-
-.carousel-item{
-    height: 10rem !important;
+    top: -14VW;
 }
 
 #submitButton {
     position: relative;
-    top: -17rem;
+    bottom: 45VH;
     z-index: 1;
     background-color: transparent !important;
     border-radius: 0px;
@@ -216,7 +221,9 @@ textarea:focus::placeholder {
 
 .invalidMessage {
     color: white;
-    visibility: hidden
+    visibility: hidden;
+    margin: auto !important;
+    max-width: 70VW;
 }
 
 .grow { 
@@ -240,15 +247,14 @@ textarea:focus::placeholder {
 }
 
 #aboutMeLink{
-    margin-left: 100px
+    margin-right: 2VW;
 }
 
 #projectsLink{
-    margin-left: 30px 
 }
 
 #contactMeLink{
-    margin-left: 30px 
+    margin-left: 2VW;
 }
 
 #aboutMe {

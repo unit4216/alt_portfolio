@@ -9,7 +9,6 @@ $(function() {
         scrollHorizontally: true,
         normalScrollElements: '#message',
         anchors: ['landingPageAnchor','aboutMeAnchor','projectsAnchor','contactMeAnchor'],
-        //navigation: true,         //DE-COMMENT TO ENABLE NAV CIRCLES
         
         //this fixes the AOS on all slides so that it doesn't just work on 1st slide, also triggers...
         //AOS on every scroll.
@@ -85,8 +84,8 @@ $(function() {
     });
 
     //event listener for submit button to send contact form as mail
-    const submitButton = document.getElementById('submitButton');
-    submitButton.addEventListener('click', sendMail);
+    const submitBtn = document.getElementById('submitButton');
+    submitBtn.addEventListener('click', sendMail);
 
     //function to make prev/next/submit buttons appear and disappear appopriately when moving through contactForm
     var contactForm = document.getElementById('contactForm')
@@ -100,6 +99,8 @@ $(function() {
             prevButton.style.display = "inline";
             submitButton.style.display = "none";
             nextButton.style.display = "inline";
+            nextButton.setAttribute('data-bs-slide-to','1');
+            nextButton.removeAttribute('data-bs-slide');
         }
         else if(e.relatedTarget.id === 'slide3'){
             submitButton.style.display = "inline";
