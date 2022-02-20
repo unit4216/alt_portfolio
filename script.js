@@ -11,7 +11,6 @@ $(function() {
         anchors: ['landingPageAnchor','aboutMeAnchor','projectsAnchor','contactMeAnchor'],
         //navigation: true,         //DE-COMMENT TO ENABLE NAV CIRCLES
         
-
         //this fixes the AOS on all slides so that it doesn't just work on 1st slide, also triggers...
         //AOS on every scroll.
         onLeave: function(){
