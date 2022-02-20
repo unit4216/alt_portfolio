@@ -100,6 +100,11 @@ AOS.init();
             });
             
             $(function() {
+            
+            const submitButton = document.getElementById('#submitButton');
+
+            submitButton.addEventListener('click', sendMail);
+
 
 
             //function to make prev/next/submit buttons appear and disappear appopriately when moving through contactForm
