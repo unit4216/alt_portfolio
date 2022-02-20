@@ -1,9 +1,7 @@
-$(function() {
 
 AOS.init();
-});
 
-$(function() {
+
 
             new fullpage('#fullpage', {
 
@@ -34,7 +32,7 @@ $(function() {
 
             fullpage_api.setAllowScrolling(true);
 
-            })
+            
 
             //anime.js for landingPage
             const staggerVisualizerEl = document.querySelector('#animation');
@@ -95,6 +93,7 @@ $(function() {
             });
             });
             
+
             //function to make prev/next/submit buttons appear and disappear appopriately when moving through contactForm
             var contactForm = document.getElementById('contactForm')
 
@@ -113,7 +112,7 @@ $(function() {
                     nextButton.style.display = "none";
                 }
             })
-            
+
             //contactForm input validation
             const nameListen = document.querySelector('#name');
             const emailListen = document.querySelector('#email');
@@ -122,6 +121,8 @@ $(function() {
             nameListen.addEventListener('blur', checkNameValid);
             emailListen.addEventListener('blur', checkEmailValid);
             messageListen.addEventListener('input', checkMessageValid);
+
+            
 
             function checkNameValid(e) {
                 if(nameListen.value == ''){
