@@ -176,10 +176,10 @@ $(function() {
                 message: contactMessage,
             },
             success:function(result){
-                document.getElementById('contactForm').innerHTML = 'Message sent!'
+                document.getElementById('contactForm').innerHTML = '<h1>Message sent!</h1>'
             }, 
             error: function (request, status, error) {
-                document.getElementById('contactForm').innerHTML = 'Error sending message.'
+                document.getElementById('contactForm').innerHTML = '<h1>Error sending message.</h1>'
             }
         });
     }
