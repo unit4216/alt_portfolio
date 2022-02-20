@@ -8,14 +8,14 @@ body {
   
 h1 {
     font-family: Bebas Neue;
-    font-size: 120px !important;
+    font-size: 20VH !important;
     font-weight: 300 !important;
     color: white;
 }
 
 h2 {
     font-family: Bebas Neue;
-    font-size: 30px !important;
+    font-size: 5VH !important;
     font-weight: 300 !important;
     color: black;
 }
