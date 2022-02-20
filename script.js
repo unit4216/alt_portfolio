@@ -1,6 +1,10 @@
+$(function() {
 
 AOS.init();
 
+});
+
+            $(function() {
 
 
             new fullpage('#fullpage', {
@@ -32,7 +36,10 @@ AOS.init();
 
             fullpage_api.setAllowScrolling(true);
 
-            
+            });
+
+            $(function() {
+
 
             //anime.js for landingPage
             const staggerVisualizerEl = document.querySelector('#animation');
@@ -64,12 +71,11 @@ AOS.init();
                 delay: anime.stagger(300, {grid: grid, from: 'center', easing:'easeInSine'}),
             })
 
-            $(function() {
 
             //plays animations
             tl.play()
 
-            })
+            });
             
             //on hover make tiles grow, no hover-off animation
             $('.tile').hover(function() {
@@ -93,6 +99,8 @@ AOS.init();
             });
             });
             
+            $(function() {
+
 
             //function to make prev/next/submit buttons appear and disappear appopriately when moving through contactForm
             var contactForm = document.getElementById('contactForm')
@@ -122,6 +130,7 @@ AOS.init();
             emailListen.addEventListener('blur', checkEmailValid);
             messageListen.addEventListener('input', checkMessageValid);
 
+            });
             
 
             function checkNameValid(e) {
