@@ -84,8 +84,8 @@ $(function() {
     });
 
     //event listener for submit button to send contact form as mail
-    const submitBtn = document.getElementById('submitButton');
-    submitBtn.addEventListener('click', sendMail);
+    const submitButton = document.getElementById('submitButton');
+    submitButton.addEventListener('click', sendMail);
 
     //function to make prev/next/submit buttons appear and disappear appopriately when moving through contactForm
     var contactForm = document.getElementById('contactForm')
@@ -176,12 +176,28 @@ $(function() {
                 message: contactMessage,
             },
             success:function(result){
-                document.getElementById('contactForm').innerHTML = '<h1>Message sent!</h1>'
+                contactFormPost('success');
             }, 
             error: function (request, status, error) {
-                document.getElementById('contactForm').innerHTML = '<h1>Error sending message.</h1>'
+                contactFormPost('error');
             }
         });
     }
 
+    function contactFormPost(result){
+
+        document.getElementById('contactForm').style.visibility = 'hidden';
+        document.getElementById('prevButton').style.visibility = 'hidden';
+        document.getElementById('nextButton').style.visibility = 'hidden';
+        document.getElementById('submitButton').style.visibility = 'hidden';
+
+        if(result=='success'){
+            document.getElementById('postForm').innerHTML = '<h1>Message sent!</h1>'
+        }
+        else if(result=='error'){
+            document.getElementById('postForm').innerHTML = '<h1>Error sending message.</h1>'
+        }
+    }
+
+    
 });
