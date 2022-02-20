@@ -2,6 +2,9 @@ $(function() {
 
 AOS.init();
 });
+
+$(function() {
+
             new fullpage('#fullpage', {
 
                 scrollbar: true,
@@ -28,7 +31,6 @@ AOS.init();
                 }
             });
 
-            $(function() {
 
             fullpage_api.setAllowScrolling(true);
 
