@@ -1,7 +1,7 @@
 $(function() {
 
 AOS.init();
-})
+});
             new fullpage('#fullpage', {
 
                 scrollbar: true,
@@ -28,7 +28,11 @@ AOS.init();
                 }
             });
 
+            $(function() {
+
             fullpage_api.setAllowScrolling(true);
+
+            })
 
             //anime.js for landingPage
             const staggerVisualizerEl = document.querySelector('#animation');
@@ -60,8 +64,12 @@ AOS.init();
                 delay: anime.stagger(300, {grid: grid, from: 'center', easing:'easeInSine'}),
             })
 
+            $(function() {
+
             //plays animations
             tl.play()
+
+            })
             
             //on hover make tiles grow, no hover-off animation
             $('.tile').hover(function() {
