@@ -299,6 +299,6 @@ textarea:focus::placeholder {
 }
 
 .postFormMsg {
-    margin-top: 2VW;
+    margin-top: 5VW;
     text-align: center !important;
 }
