@@ -80,7 +80,7 @@ a {
 }
 
 .project:hover {
-    box-shadow: inset 35rem 0 0 0.05px #FF8300;
+    box-shadow: inset 45VW 0 0 0.05px #FF8300;
 }
 
 .projectGridElement { 
